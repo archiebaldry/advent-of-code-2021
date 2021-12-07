@@ -4,11 +4,11 @@ lastMeasurement = None
 increaseCount = 0
 decreaseCount = 0
 
-for measurement in input:
+for measurement in [int(line) for line in input.readlines()]:
     if lastMeasurement:
         if measurement > lastMeasurement:
             increaseCount += 1
-        elif measurement < lastMeasurement:
+        else:
             decreaseCount += 1
     lastMeasurement = measurement
 
